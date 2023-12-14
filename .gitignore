@@ -3,3 +3,14 @@
 
 # Except this ignore list.
 !/.gitignore
+
+# Allow the Cargo manifest.
+!/Cargo.toml
+
+# Allow the Cargo lock file.
+# !/Cargo.lock
+
+# Allow the source files.
+!/src/
+!/src/**/
+!/src/**/*.rs
