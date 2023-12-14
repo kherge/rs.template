@@ -1,2 +1,7 @@
 # Allow this file.
 !/.gitignore
+
+# Allow issue templates.
+!/ISSUE_TEMPLATE/
+!/ISSUE_TEMPLATE/*.yml
+!/PULL_REQUEST_TEMPLATE.md
