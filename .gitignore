@@ -4,6 +4,9 @@
 # Allow the container configuration files.
 !/.devcontainer/
 
+# Allow the GitHub files.
+!/.github/
+
 # Allow this ignore list.
 !/.gitignore
 
