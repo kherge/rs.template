@@ -16,6 +16,9 @@
 # Allow the Cargo lock file.
 # !/Cargo.lock
 
+# Allow the license file.
+!/LICENSE
+
 # Allow the source files.
 !/src/
 !/src/**/
