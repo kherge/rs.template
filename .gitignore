@@ -1,7 +1,10 @@
 # Exclude everything.
 *
 
-# Except this ignore list.
+# Allow the container configuration files.
+!/.devcontainer/
+
+# Allow this ignore list.
 !/.gitignore
 
 # Allow the Cargo manifest.
