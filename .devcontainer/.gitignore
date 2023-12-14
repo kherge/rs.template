@@ -1,0 +1,11 @@
+# Allow this file.
+!/.gitignore
+
+# Allow the Dockerfile.
+!/Dockerfile
+
+# Allow the metadata file.
+!/devcontainer.json
+
+# Allow the shell initialization script.
+!/init.sh
