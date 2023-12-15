@@ -12,6 +12,11 @@
                 "vadimcn.vscode-lldb"
             ],
             "settings": {
+                "[markdown]": {
+                    "editor.rulers": [100],
+                    "editor.wordWrap": "wordWrapColumn",
+                    "editor.wordWrapColumn": 100
+                },
                 "files.watcherExclude": {
                     "**/target/**": true
                 }
