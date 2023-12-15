@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get autoremove -y && \
     apt-get clean && \
-    apt-get install curl git gpg
+    apt-get install -y curl git gpg vim
 
 RUN rustup component add clippy
 
