@@ -1,0 +1,26 @@
+[package]
+name = "template"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+
+description = "A template for applications and libraries."
+license = "ISC"
+authors = ["Kevin Herrera <kevin@herrera.io>"]
+homepage = "https://github.com/kherge/rs.template"
+repository = "https://github.com/kherge/rs.template/"
+keywords = ["development", "template"]
+categories = []
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "bin"
+path = "src/main.rs"
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+strip = "debuginfo"
