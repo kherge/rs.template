@@ -19,6 +19,9 @@
 # Allow the license file.
 !/LICENSE
 
+# Allow the README file.
+!/README.md
+
 # Allow the source files.
 !/src/
 !/src/**/
