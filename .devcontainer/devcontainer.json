@@ -1,16 +1,8 @@
 {
     "name": "Rust Template",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "mcr.microsoft.com/devcontainers/rust:latest",
     "customizations": {
         "vscode": {
-            "extensions": [
-                "rust-lang.rust-analyzer",
-                "serayuzgur.crates",
-                "tamasfe.even-better-toml",
-                "vadimcn.vscode-lldb"
-            ],
             "settings": {
                 "[markdown]": {
                     "editor.rulers": [100],
