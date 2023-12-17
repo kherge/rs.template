@@ -26,7 +26,11 @@ There are two stages to getting started: making this repository yours, and using
 
    TODO
 
-4. **Replace `README.md`.**
+4. **Modify `.gitignore` to allow `Cargo.lock`.**
+
+   If appropriate, you may want to uncomment the line that allows `Cargo.lock` to be included in the repository. It is best practice to include this for binaries, but not for libraries.
+
+5. **Replace `README.md`.**
 
    The original README in the template is meant as a guide on how to use it, so a new README for the project is needed. For some inspiration, check out [Awesome README](https://github.com/matiassingers/awesome-readme) which provides a curated listed of... awesome READMEs!
 
