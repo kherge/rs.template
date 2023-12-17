@@ -5,6 +5,10 @@
     },
     "customizations": {
         "vscode": {
+            "extensions": [
+                "davidanson.vscode-markdownlint",
+                "yzhang.markdown-all-in-one"
+            ],
             "settings": {
                 "[markdown]": {
                     "editor.rulers": [100],
