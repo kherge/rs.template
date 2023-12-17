@@ -34,6 +34,19 @@ There are two stages to getting started: making this repository yours, and using
 
    The original README in the template is meant as a guide on how to use it, so a new README for the project is needed. For some inspiration, check out [Awesome README](https://github.com/matiassingers/awesome-readme) which provides a curated listed of... awesome READMEs!
 
+6. **Replace GitHub issue labels.**
+
+   The issue templates make use of three specific labels: Bug, Enhancement, and Feature. It is recommended to also include labels for Duplicate, Invalid, and Won't Fix. The following table may be copied and pasted from when setting up issue labels:
+
+   | Label | Description | Color |
+   |:------|:------------|:-----:|
+   | Bug | Identification of, or the solution to, a bug. | `#ee3f46` |
+   | Duplicate | A duplicate issue or solution. | `#d2dae1` |
+   | Enhancement | Identification of, or the solution to, an enhancement to an existing feature. | `#5ebeff` |
+   | Feature | Proposal of, or work done for, a new feature. | `#91ca55` |
+   | Invalid | An incorrect, misidentified, or out of scope issue or solution. | `#d2dae1` |
+   | Won't Fix | An issue or solution for something working as intended or is out of scope. | `#d2dae1` |
+
 ### Developing with Visual Studio Code
 
 1. **Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).**
