@@ -1,6 +1,8 @@
 {
     "name": "Rust Template",
-    "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "customizations": {
         "vscode": {
             "settings": {
@@ -14,5 +16,6 @@
                 }
             }
         }
-    }
+    },
+    "postCreateCommand": "sh /usr/local/post-create.sh"
 }

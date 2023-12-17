@@ -7,5 +7,5 @@
 # Allow the metadata file.
 !/devcontainer.json
 
-# Allow the shell initialization script.
-!/init.sh
+# Allow post-creation script.
+!/post-create.sh
