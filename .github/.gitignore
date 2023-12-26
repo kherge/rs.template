@@ -5,5 +5,9 @@
 !/ISSUE_TEMPLATE/
 !/ISSUE_TEMPLATE/*.yml
 
+# Allow the workflow definitions.
+!/workflows/
+!/workflows/*.yml
+
 # Allow the pull request template.
 !/PULL_REQUEST_TEMPLATE.md
