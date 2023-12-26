@@ -24,7 +24,7 @@ There are two stages to getting started: making this repository yours, and using
 
 3. **Modify `.github/workflows/test.yml`.**
 
-   TODO
+   One of the jobs may need to be deleted, and the other modified to better support the project. Consider configuring the `dtolnay/rust-toolchain` action to use a specific version of Rust.
 
 4. **Modify `.gitignore` to allow `Cargo.lock`.**
 
