@@ -26,3 +26,8 @@
 !/src/
 !/src/**/
 !/src/**/*.rs
+
+# Allow integration test files.
+!/tests/
+!/tests/**/
+!/tests/**/*.rs
