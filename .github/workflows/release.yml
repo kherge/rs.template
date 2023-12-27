@@ -1,0 +1,14 @@
+name: Releasing
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+
+  build:
+    name: Publish Binary for '{{ $os }}'
+
+  docs:
+    name: Publish Documentation
