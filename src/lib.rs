@@ -1,3 +1,3 @@
-pub fn example() {
-    println!("Hello, world!");
+pub fn example(name: &str) -> String {
+    format!("Hello, {}!", name)
 }
