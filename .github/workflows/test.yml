@@ -14,15 +14,25 @@ jobs:
   unit:
     name: Testing using Rust ${{ matrix.toolchain }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.canary }}
     strategy:
       matrix:
+        canary: false
         os:
           - macos-latest
           - ubuntu-latest
           - windows-latest
-        toolchain:
-          - 1.74   # Ensure MSRV is true.
-          - stable # Ensure latest support.
+        toolchain: 1.74 # Ensure MSRV is true.
+        include: # Treat latest stable as canary.
+          - canary: true
+            os: macos-latest
+            toolchain: stable
+          - canary: true
+            os: ubuntu-latest
+            toolchain: stable
+          - canary: true
+            os: windows-latest
+            toolchain: stable
     steps:
       - uses: actions/checkout@v4
       - id: toolchain
