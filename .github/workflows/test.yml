@@ -11,7 +11,7 @@ env:
 
 jobs:
 
-  unit:
+  test:
     name: Testing using Rust ${{ matrix.toolchain }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.canary }}
