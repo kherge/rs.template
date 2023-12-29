@@ -38,7 +38,7 @@ jobs:
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
             target/
-          key: ${{ steps.toolchain.outputs.cachekey }}
+          key: ${{ matrix.os }}-${{ steps.toolchain.outputs.cachekey }}
       - run: cargo fmt -- --check
       - run: cargo clippy -- --deny warnings
       - run: cargo test --all-features
