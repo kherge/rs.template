@@ -17,12 +17,12 @@ jobs:
     continue-on-error: ${{ matrix.canary }}
     strategy:
       matrix:
-        canary: false
+        canary: [false]
         os:
           - macos-latest
           - ubuntu-latest
           - windows-latest
-        toolchain: "1.74" # Ensure MSRV is true.
+        toolchain: ["1.74"] # Ensure MSRV is true.
         include: # Treat latest stable as canary.
           - canary: true
             os: macos-latest
