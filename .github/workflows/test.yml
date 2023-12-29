@@ -28,7 +28,7 @@ jobs:
       - id: toolchain
         uses: dtolnay/rust-toolchain@master
         with:
-          components: clippy
+          components: clippy,rustfmt
           toolchain: ${{ matrix.toolchain }}
       - uses: actions/cache@v3
         with:
@@ -39,5 +39,6 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ steps.toolchain.outputs.cachekey }}
+      - run: cargo fmt -- --check
       - run: cargo clippy -- --deny warnings
       - run: cargo test --all-features
