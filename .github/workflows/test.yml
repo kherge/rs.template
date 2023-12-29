@@ -9,7 +9,7 @@ on:
 jobs:
 
   unit:
-    name: ${{ matrix.toolchain }} on ${{ matrix.os }}
+    name: Testing using Rust ${{ matrix.toolchain }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
