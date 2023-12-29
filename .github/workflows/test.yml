@@ -34,13 +34,19 @@ jobs:
             os: windows-latest
             toolchain: stable
     steps:
-      - uses: actions/checkout@v4
+
+      - name: Checking out source
+        uses: actions/checkout@v4
+
       - id: toolchain
+        name: Setup Rust Toolchain
         uses: dtolnay/rust-toolchain@master
         with:
           components: clippy,rustfmt
           toolchain: ${{ matrix.toolchain }}
-      - uses: actions/cache@v3
+
+      - name: Preparing caches
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cargo/bin/
@@ -49,6 +55,12 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ matrix.os }}-${{ steps.toolchain.outputs.cachekey }}
-      - run: cargo fmt -- --check
-      - run: cargo clippy -- --deny warnings
-      - run: cargo test --all-features
+
+      - name: Checking source formatting
+        run: cargo fmt -- --check
+
+      - name: Linting source code
+        run: cargo clippy -- --deny warnings
+
+      - name: Running unit and integration tests
+        run: cargo test --all-features
