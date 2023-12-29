@@ -35,11 +35,11 @@ jobs:
             toolchain: stable
     steps:
 
-      - name: Checking out source
+      - name: Checking out source code
         uses: actions/checkout@v4
 
       - id: toolchain
-        name: Setup Rust Toolchain
+        name: Setting up Rust toolchain
         uses: dtolnay/rust-toolchain@master
         with:
           components: clippy,rustfmt
@@ -56,7 +56,7 @@ jobs:
             target/
           key: ${{ matrix.os }}-${{ steps.toolchain.outputs.cachekey }}
 
-      - name: Checking source formatting
+      - name: Checking source code formatting
         run: cargo fmt -- --check
 
       - name: Linting source code
