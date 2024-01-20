@@ -26,13 +26,13 @@ jobs:
         include: # Treat latest stable as canary.
           - canary: true
             os: macos-latest
-            toolchain: stable
+            version: stable
           - canary: true
             os: ubuntu-latest
-            toolchain: stable
+            version: stable
           - canary: true
             os: windows-latest
-            toolchain: stable
+            version: stable
     steps:
 
       - name: Checking out source code
