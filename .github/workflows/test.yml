@@ -66,18 +66,21 @@ jobs:
         run: cargo test --all-features
 
       - name: Checking for trusted sources
+        if: ${{ runner.os == 'Linux' }}
         uses: EmbarkStudios/cargo-deny-action@v1
         with:
           command: check sources
           rust-version: ${{ matrix.version }}
 
       - name: Checking for advisories
+        if: ${{ runner.os == 'Linux' }}
         uses: EmbarkStudios/cargo-deny-action@v1
         with:
           command: check advisories
           rust-version: ${{ matrix.version }}
 
       - name: Checking for license compliance
+        if: ${{ runner.os == 'Linux' }}
         uses: EmbarkStudios/cargo-deny-action@v1
         with:
           command: check licenses
