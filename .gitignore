@@ -22,6 +22,9 @@
 # Allow the README file.
 !/README.md
 
+# Allow cargo-deny configuration file.
+!/deny.toml
+
 # Allow the source files.
 !/src/
 !/src/**/

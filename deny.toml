@@ -1,0 +1,11 @@
+[advisories]
+unmaintained = "deny"
+unsound = "deny"
+
+[licenses]
+allow = ["ISC"]
+
+[sources]
+required-git-spec = "tag"
+unknown-registry = "deny"
+unknown-git = "deny"

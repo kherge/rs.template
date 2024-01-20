@@ -12,7 +12,7 @@ env:
 jobs:
 
   test:
-    name: Testing using Rust ${{ matrix.toolchain }} on ${{ matrix.os }}
+    name: Testing using Rust ${{ matrix.version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.canary }}
     strategy:
@@ -22,7 +22,7 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
-        toolchain: ["1.74"] # Ensure MSRV is true.
+        version: ["1.74"] # Ensure MSRV is true.
         include: # Treat latest stable as canary.
           - canary: true
             os: macos-latest
@@ -43,7 +43,7 @@ jobs:
         uses: dtolnay/rust-toolchain@master
         with:
           components: clippy,rustfmt
-          toolchain: ${{ matrix.toolchain }}
+          toolchain: ${{ matrix.version }}
 
       - name: Preparing caches
         uses: actions/cache@v3
@@ -64,3 +64,21 @@ jobs:
 
       - name: Running unit and integration tests
         run: cargo test --all-features
+
+      - name: Checking for trusted sources
+        uses: EmbarkStudios/cargo-deny-action@v1
+        with:
+          command: check sources
+          rust-version: ${{ matrix.version }}
+
+      - name: Checking for advisories
+        uses: EmbarkStudios/cargo-deny-action@v1
+        with:
+          command: check advisories
+          rust-version: ${{ matrix.version }}
+
+      - name: Checking for license compliance
+        uses: EmbarkStudios/cargo-deny-action@v1
+        with:
+          command: check licenses
+          rust-version: ${{ matrix.version }}
