@@ -71,6 +71,14 @@ There are two stages to getting started: making this repository yours, and using
 
    Once you have created or found an issue, create a fork with the desired changes and open a pull request. Please follow the instructions in the PR templates carefully, otherwise I may close it.
 
+### Testing
+
+The full continuous integration test suite may be run locally.
+
+```sh
+./scripts/test.sh
+```
+
 ## License
 
 This template is made available under the [ISC](LICENSE) license.

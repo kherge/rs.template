@@ -25,6 +25,9 @@
 # Allow cargo-deny configuration file.
 !/deny.toml
 
+# Allow the scripts.
+!/scripts/
+
 # Allow the source files.
 !/src/
 !/src/**/

@@ -1,0 +1,5 @@
+# Allow this ignore file.
+!/.gitignore
+
+# Allow shell scripts.
+!*.sh
