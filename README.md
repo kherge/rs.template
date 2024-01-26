@@ -1,7 +1,6 @@
 # Rust Template
 
-> **Note**
->
+> [!NOTE]
 > This template is primary designed for myself.
 
 A repository template for Rust-based applications and libraries.
